@@ -18,6 +18,6 @@ def market_page():
     
 @app.route("/about")
 def about_page():
-    return render_tempçate("about.html")
+    return render_template("about.html")
     
     
