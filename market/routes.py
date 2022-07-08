@@ -1,6 +1,7 @@
 from market import app
 from market.db_models import Item
 from flask import render_template
+from market.forms import RegisterForm
 
 
 @app.route("/")
@@ -17,4 +18,7 @@ def market_page():
 def about_page():
     return render_template("about.html")
     
-    
+@app.route("/register")
+def register_page():
+    form = RegisterForm()
+    return render_template("register.html", form=form)
